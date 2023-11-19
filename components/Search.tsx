@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { usePathname, useRouter } from 'next/navigation';
-import { useTransition } from 'react';
+import { usePathname, useRouter } from "next/navigation";
+import { useTransition } from "react";
 
 export default function Search({ disabled }: { disabled?: boolean }) {
   const { replace } = useRouter();
@@ -11,9 +11,9 @@ export default function Search({ disabled }: { disabled?: boolean }) {
   function handleSearch(term: string) {
     const params = new URLSearchParams(window.location.search);
     if (term) {
-      params.set('q', term);
+      params.set("q", term);
     } else {
-      params.delete('q');
+      params.delete("q");
     }
 
     startTransition(() => {
@@ -22,7 +22,7 @@ export default function Search({ disabled }: { disabled?: boolean }) {
   }
 
   return (
-    <div className="relative mt-5 max-w-md">
+    <div className="w-full lg:w-1/2 items-center justify-center content-center relative">
       <label htmlFor="search" className="sr-only">
         Search
       </label>
@@ -32,17 +32,17 @@ export default function Search({ disabled }: { disabled?: boolean }) {
           name="search"
           id="search"
           disabled={disabled}
-          className="h-10 block w-full rounded-md border border-gray-200 pl-9 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:text-gray-700"
-          placeholder="Search by name..."
+          className="text-xl leading-[3rem] ps-5 sm:ps-2 text-gray-900 flex-grow focus:outline-none w-full rounded-full dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+          placeholder="لبزءِدرگیجگ ءَ ادا نبشتہ بہ کن اِت"
           spellCheck={false}
           onChange={(e) => handleSearch(e.target.value)}
         />
       </div>
 
       {isPending && (
-        <div className="absolute right-0 top-0 bottom-0 flex items-center justify-center">
+        <div className="absolute left-2 top-0 bottom-0 flex items-center justify-center">
           <svg
-            className="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-700"
+            className="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-200"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

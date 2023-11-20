@@ -103,7 +103,7 @@ export default async function IndexPage({
       <Search search={search} />
       {search === "" && <AlphabetGrid />}
       {search && (
-        data?.length > 0 ? <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        data ? <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {data?.map((word, index) => (
           <Link href={`/search/${word.id}?word=${word.word_with_symbols}`}>
             <div

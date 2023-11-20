@@ -88,6 +88,7 @@ export default async function IndexPage({
     //                   </div>
     //                   <div className="mb-2 text-gray-700">
     //                     {word.word_with_symbols}
+
     //                   </div>
     //                   <div className="text-gray-500">{word.definition}</div>
     //                 </div>
@@ -99,11 +100,15 @@ export default async function IndexPage({
     //     </main>
     //   </div>
     // </div>
-    <div className="w-full p-5 flex flex-col justify-center items-center">
+    <div className="w-full p-5 flex flex-col justify-center items-center dark:bg-gray-700 dark:text-gray-200">
       <Search search={search} />
       {search === "" && <AlphabetGrid />}
       {search && (
-        data ? <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        data ? 
+        <>
+        <p>{data?.length}</p>
+
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {data?.map((word, index) => (
           <Link href={`/search/${word.id}?word=${word.word_with_symbols}`}>
             <div
@@ -120,7 +125,7 @@ export default async function IndexPage({
             </div>
           </Link>
         ))}
-      </div> : <div className="mt-10">Nothing found</div>
+      </div></> : <div className="mt-10">Nothing found</div>
       )}
     </div>
   );

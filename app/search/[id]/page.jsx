@@ -7,6 +7,7 @@ import Link from "next/link";
 export default async function WordDetailPage({ params, searchParams }) {
   const cookieStore = cookies();
   const supabase = createClient(cookieStore);
+  
   const { data, error } = await supabase
     .from("words")
     .select("*")
@@ -15,7 +16,7 @@ export default async function WordDetailPage({ params, searchParams }) {
 
   console.log(data, error);
   return (
-    <div className="flex flex-col w-full ">
+    <div className="flex flex-col w-full dark:text-white dark:bg-gray-700">
       <div className="mt-5 flex flex-col justify-center ">
         <Link
           href={"/"}

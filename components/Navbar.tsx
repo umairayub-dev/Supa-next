@@ -3,7 +3,7 @@ import { MdHistory, MdSettings, MdBookmarks, MdInfoOutline } from 'react-icons/m
 
 export const Navbar = () => {
     return (
-        <nav className='w-full dark:text-white shadow'>
+        <nav className='w-full dark:text-white dark:bg-gray-700 shadow'>
             <div className='flex h-14 items-center justify-between px-5'>
                 <div className='flex gap-1'>
                     <button

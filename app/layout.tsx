@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="bal" dir="rtl">
-      <body className="min-h-screen h-screen ">
+      <body className="min-h-screen h-screen dark:bg-gray-700 dark:text-white ">
         <Navbar />
         <main className="w-[100vw] overflow-x-hidden overflow-y-auto m-auto flex flex-col">
           {children}

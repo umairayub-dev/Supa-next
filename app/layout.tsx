@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="bal" dir="rtl" className={GeistSans.className}>
-      <body className="bg-background text-foreground">
+      <body className="bg-gray-900 h-[100vh] w-[100vw] overflow-x-hidden overflow-y-auto m-auto flex flex-col">
         <main className="min-h-screen flex flex-col items-center">
           {children}
         </main>

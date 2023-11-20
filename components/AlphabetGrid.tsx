@@ -39,7 +39,7 @@ const AlphabetGrid = () => {
         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-12 gap-4 sm:gap-2 md:gap-1">
           {alphabets.map((alphabet, index) => (
             <Link
-              href={`/search/${alphabet}`}
+              href={`/?q=${alphabet}`}
               key={index}
               className="cursor-pointer p-5 text-2xl border border-gray-300 rounded-md shadow dark:border-gray-700 sm:p-2 md:p-1"
               aria-label={`Search words starting with ${alphabet}`}

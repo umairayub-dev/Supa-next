@@ -41,7 +41,7 @@ export default function Search({
       <label htmlFor="search" className="sr-only">
         Search
       </label>
-      <div className="rounded-md shadow-sm">
+      <div className="flex justify-center text-gray-900 rounded-full shadow-md border p-1 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
         <input
           type="text"
           name="search"
@@ -58,7 +58,7 @@ export default function Search({
       {isPending && (
         <div className="absolute left-2 top-0 bottom-0 flex items-center justify-center">
           <svg
-            className="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-600 dark:text-gray-400"
+            className="animate-spin ml-3 mr-3 h-6 w-6 text-gray-600 dark:text-gray-400"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
